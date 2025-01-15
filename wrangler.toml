@@ -1,5 +1,5 @@
 compatibility_date = "2024-12-30"
-name = "worker-kv-manager"
+name = "worker-weekmeter-kv"
 workers_dev = true
 routes = ["https://api.example.com/kv*", "https://api.example.com/version/kv*"]
 vars = {}

@@ -2,7 +2,7 @@ compatibility_date = "2024-12-30"
 name = "worker-weekmeter-kv"
 workers_dev = true
 routes = ["https://kv.weekmeter.com/kv*", "https://kv.weekmeter.com/version*"]
-vars = {}
+vars = { readonly = "true" }
 main = "./index.ts"
 minify = true
 upload_source_maps = true
@@ -14,7 +14,7 @@ enabled = true
 
 [env.local]
 routes = []
-vars = { adminSecret = "YWRtaW46cGFzc3dvcmQ=" }
+vars = { readonly = "true", adminSecret = "YWRtaW46cGFzc3dvcmQ=" }
 durable_objects.bindings = []
 kv_namespaces = [
 	{ binding = "kvStore", id = "abc", preview_id = "abc" },

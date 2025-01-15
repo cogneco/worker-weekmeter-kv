@@ -10,7 +10,7 @@ export async function append(request: http.Request, context: Context): Promise<h
 	let result: gracely.Error | any
 	const kv = context.kv
 	const body = await request.body
-	if (!request.header.authorization)
+	if (!((await context.authenticate(request)) == "admin") || !context.writeable)
 		result = gracely.client.unauthorized()
 	else if (gracely.Error.is(kv))
 		result = kv

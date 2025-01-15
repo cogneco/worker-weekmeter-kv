@@ -3,4 +3,5 @@ export interface Environment
 	adminSecret?: string
 	kvStore?: KVNamespace
 	kvPrefix?: string
+	readonly?: "true"
 }

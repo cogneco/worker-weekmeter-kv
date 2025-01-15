@@ -1,6 +1,6 @@
 {
 	"name": "@utily/worker-kv-manager",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"description": "Backend for managing data in Cloudflare Workers KV.",
 	"author": "Utily Contributors",
 	"license": "MIT",
